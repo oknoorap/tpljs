@@ -35,3 +35,32 @@ console.log( template.view('template_name', {hash: function() {
 }}) );
 
 ```
+
+**With jQuery**
+```
+(function($){
+   var
+      tpl = new tpljs(),
+      divclass = ''
+   ;
+   
+   tpl.add('red-bg', function() {/*
+      <div id="red-bg" $class>
+         Hello world;
+      </div>
+   */});
+   
+   $(document).ready(function(){
+      $('a').on('click', function(){
+         if(window.location.hash === '#foobar') {
+            divclass = 'class="red"';
+         }
+         
+         $('#parent-div').html( tpl.view('red-bg', {
+            class: divclass
+         }));
+      });
+   });
+   
+})(jQuery)
+```
