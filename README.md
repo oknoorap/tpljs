@@ -1,7 +1,7 @@
 Javascript Micro-Templating for Clients (tpljs)
 =====
 
-** Usage **
+**Usage**
 ```
 var template = new tpljs();
 
