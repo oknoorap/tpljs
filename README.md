@@ -14,6 +14,7 @@ console.log( template.view('template_name', {variable: 'your data or function'})
 ```
 
 **Pass variable using callback**
+
 You can pass variable using callback, e.g
 
 ```
