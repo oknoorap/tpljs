@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Homepage</title>
+<script src="tpl.js"></script>
+</head>
+
+<body>
+<div id="element"></div>
+<script>
+var
+   template = new tpljs(),
+   element = document.getElementById('element')
+;
+
+(function() {
+
+   template.add('monster', function() {/*
+hello world,
+I am monster, you is $human,
+nice to meet you
+*/});
+
+   element.innerHTML = template.view('monster', {human: 'an eternal soul'});
+
+})();
+</script>
+</body>
+</html
