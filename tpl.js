@@ -42,7 +42,9 @@ var tpljs = function() {
                 template = template.replace(rtemplate, function replace_var_with_value(match, value) {
                     if (obj.hasOwnProperty( value )) {
                         return obj[ value ];
-                    };
+                    }
+
+                    return '$' + value;
                 });
 
             }
