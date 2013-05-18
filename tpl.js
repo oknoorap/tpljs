@@ -14,7 +14,7 @@ var tpljs = function() {
 	_tpljs.prototype.tpl = {};
 	
 	/* add tpl js using function, templating using javascript comments */
-	_tpljs.prototype.add = function(name, fn){
+	_tpljs.prototype.add = function(name, fn) {
 		var
 			rcontentMatch = fn.toString().match(rcontent),
 			content = ''
@@ -37,16 +37,14 @@ var tpljs = function() {
 
 		if( typeof template !== 'undefined' ) {
 			if(typeof obj !== 'undefined') {
-				var
-					i
-				;
 
 				/* Replace all variables with objects */
-				template = template.replace(rtemplate, function(m, $1){
-					if(obj.hasOwnProperty($1)){
-						return obj[$1];
+				template = template.replace(rtemplate, function replace_var_with_value(match, value) {
+					if (obj.hasOwnProperty( value )) {
+						return obj[ value ];
 					};
 				});
+
 			}
 			return template;
 		}
