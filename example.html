@@ -18,11 +18,11 @@ var
 
    template.add('monster', function() {/*
 hello world,
-I am monster, you is $human,
+I am monster, you is $human, my name is $monster_name
 nice to meet you
 */});
 
-   element.innerHTML = template.view('monster', {human: 'an eternal soul'});
+   element.innerHTML = template.view('monster', {monster_name: 'gondora', human: 'an eternal soul'});
 
 })();
 </script>
